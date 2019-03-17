@@ -35,35 +35,30 @@ function Comen(){
 
 function save(){
 	//console.log("hola");
-	function Persona(nombre, descripcion){
+	function Persona(nombre, descripcion, img){
 		this.nombre = nombre;
 		this.descripcion = descripcion;
-		//this. img=img;
+		this. img=img;
 	}
 	var nombreCapt = document.getElementById("name").value;
 	var desCapt= document.getElementById("Desc").value;
-	//var imgURL = document.getElementById("Img").src;
+	var imgURL = document.getElementById("Img").value;
 	///console.log(nombreCapt + " <br> " +desCapt);
-	newPer = new Persona (nombreCapt,desCapt);
+	newPer = new Persona (nombreCapt,desCapt,imgURL);
 	console.log(newPer);
-	imagen();
+	//imagen();
 	BaseDatos();
 	limpiar();
-
-
 }
 function BaseDatos(){
 	f = new Date();
 	var months = ["enero", "febrero", "marzo", "abril", "mayo", "junio"];
 	BaseDat.push(newPer);
-	document.getElementById("Datos").innerHTML += "Usuario: " + newPer.nombre + "<br>"+ 
-	"Descripcion:  " + newPer.descripcion + " <br> " + "Fecha: "+ f.getDate() + " / " + 
-	months[f.getMonth()] + " / " + f.getFullYear() + " <br> " ;
+	document.getElementById("Datos").innerHTML += "Usuario: " + newPer.nombre + "<br>"+ "Descripcion:  " + newPer.descripcion + " <br> " 
+	+ "Fecha: "+ f.getDate() + " / " + months[f.getMonth()] + " / " + f.getFullYear() + " <br> "+ '<img src="' + newPer.img + '" alt="Smiley face" height="42" width="42">' +
+	'<div id="DivSection"><p id="List"></p>'+ '</div>' ;
 }
-
-
 function ListCom(){
-
   	BaseCom.push(document.getElementById("ComInput").value);
   	contador++ ;
   	console.log(BaseCom);
@@ -78,12 +73,12 @@ function ListCom(){
    		 }
    		 limpCom();
  	 } 
-function imagen(){
+/*function imagen(){
 	document.getElementById('Datos').innerHTML = "<img src=' " + URL + " '> ";
 }
 
 
-/*function imagen(){
+function imagen(){
 	var x = document.createElement("IMG");
     x.setAttribute("src", "https://www.ecured.cu/images/thumb/a/a4/Perros1.jpg/260px-Perros1.jpg");
     document.body.appendChild(x);
