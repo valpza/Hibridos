@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+
+	<div>
+		<h4>Usuario 
+		<input id="name" type="Text" name="name" placeholder="Nombre">
+		</h4>
+		<h4>Descripcion 
+		<input id="Desc" type="Text" name="Desc" placeholder="Descripcion">
+		</h4>
+		<h4>Imagen <input id="Img" type="src" placeholder="Imagen" ></h4>
+		<button id="boton" type="button" onclick="save();">Guardar</button>
+		<hr>
+	</div>
+	
+	<div >
+	<!--<img id="Img"src="imgURL" alt="">-->
+	<p id="Datos"></p>
+	<br>
+	<button type="button"  onclick="Comen(3);">Campo de Comentarios</button>
+	</div>
+
+	<div id="DivSection" style="display:none;">
+		<h4>Generar comentario: 
+		<input id="ComInput" type="Text" placeholder="Escribe un comentario">
+		<button type="button"  onclick="ListCom();">Comentar</button>
+		<p id="List"></p>
+
+	</h4>
+
+	<br>
+	</div>	
+	<script type="text/javascript"src="examuni1.js"></script>
+</body>
+</html>
