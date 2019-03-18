@@ -56,7 +56,7 @@ function BaseDatos(){
 	BaseDat.push(newPer);
 	document.getElementById("Datos").innerHTML += "Usuario: " + newPer.nombre + "<br>"+ "Descripcion:  " + newPer.descripcion + " <br> " 
 	+ "Fecha: "+ f.getDate() + " / " + months[f.getMonth()] + " / " + f.getFullYear() + " <br> "+ '<img src="' + newPer.img + '" alt="Smiley face" height="42" width="42">' +
-	'<div id="DivSection"><p id="List"></p>'+ '</div>' ;
+	'<div id="datos"><p id="List"></p>'+ '</div>' ;
 }
 function ListCom(){
   	BaseCom.push(document.getElementById("ComInput").value);
@@ -73,13 +73,3 @@ function ListCom(){
    		 }
    		 limpCom();
  	 } 
-/*function imagen(){
-	document.getElementById('Datos').innerHTML = "<img src=' " + URL + " '> ";
-}
-
-
-function imagen(){
-	var x = document.createElement("IMG");
-    x.setAttribute("src", "https://www.ecured.cu/images/thumb/a/a4/Perros1.jpg/260px-Perros1.jpg");
-    document.body.appendChild(x);
-}*/
