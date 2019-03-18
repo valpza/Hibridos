@@ -54,9 +54,9 @@ function BaseDatos(){
 	f = new Date();
 	var months = ["enero", "febrero", "marzo", "abril", "mayo", "junio"];
 	BaseDat.push(newPer);
-	document.getElementById("Datos").innerHTML += '<img src="' + newPer.img + 
-	' height="42" width="42">' +	'<div id="datos"><p id="Datos"></p>'+ '</div>' +  " <br> "+ "Usuario: " + newPer.nombre + "<br>"+ "Descripcion:  " + newPer.descripcion + " <br> " 
-	+ "Fecha: "+ f.getDate() + " / " + months[f.getMonth()] + " / " + f.getFullYear() + " <br> "+ ;
+	document.getElementById("Datos").innerHTML += "Usuario: " + newPer.nombre + "<br>"+ "Descripcion:  " + newPer.descripcion + " <br> " 
+	+ "Fecha: "+ f.getDate() + " / " + months[f.getMonth()] + " / " + f.getFullYear() + " <br> "+ '<img src="' + newPer.img + 
+	'" alt="Smiley face" height="42" width="42">' +	'<div id="datos"><p id="Datos"></p>'+ '</div>' ;
 }
 function ListCom(){
   	BaseCom.push(document.getElementById("ComInput").value);
